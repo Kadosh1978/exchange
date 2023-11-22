@@ -38,7 +38,9 @@ def get_price (message: telebot.types.Message):
     else:
         total_bases = float(total_base)
         amounts = float(amount)
-        text = f'Цена {amount} {quote} в {base} - {total_bases*amounts}'
+        sume= total_bases*amounts
+        sumf = round(sume, 2)
+        text = f'Цена {amount} {quote} в {base} - {sumf}'
         bot.send_message(message.chat.id, text)
 
 
