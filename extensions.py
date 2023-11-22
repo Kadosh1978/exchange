@@ -16,6 +16,7 @@ class CurrencyConverter:
         except KeyError:
             raise ConvertionExeption(f'Не удалось обработать валюту {quote}')
 
+
         try:
             base_ticker = keys[base]
         except KeyError:
